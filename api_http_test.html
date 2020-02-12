@@ -11,14 +11,18 @@ var headerss = new Headers();
 
 
 $(document).ready(function(){
+  // se utiliza jquery para detectar el click del boton con el id getbutton
   $("#getbutton").click(function(){
     console.log("haciendo get")
+    // se hace el fetch a la url
     fetch("http://192.168.0.20:8080/test", {
+        // se escoge el metodo de la peticion
         method: "GET",
-        //headers: headerss,
         //el cors permite hacer requests entre sitios
         mode: 'cors'    
+    // la respuesta se convierte en un json
     }).then(res => res.json()
+    // aqui se hace algo con la respuesta
     .then(function(data) {
     console.log(data)
     }));
@@ -28,14 +32,17 @@ $(document).ready(function(){
 $(document).ready(function(){
   $("#postbutton").click(function(){
     console.log("haciendo post")
+    // se genera el mensaje que se mandara en el post, de preferencia json
+    // los valores se pueden sacar de los elementos del DOM con jquery
+    // https://www.w3schools.com/jquery/
     postMessage = {
       name: "Donald Duck",
       city: "Duckburg"
     };
     fetch("http://192.168.0.20:8080/test", {
         method: "POST",
+        // se convierte el json en un string
         body: JSON.stringify(postMessage),
-        //headers: headerss,
         //el cors permite hacer requests entre sitios
         mode: 'cors'    
       }).then(res => res.json()
