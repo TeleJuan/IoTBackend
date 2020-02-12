@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+var headerss = new Headers();
+
+
+//  NOTA: algo que puede servir 
+//      https://jesse.sh/crud-fetch/
+
+
+$(document).ready(function(){
+  $("#getbutton").click(function(){
+    console.log("haciendo get")
+    fetch("http://192.168.0.20:8080/test", {
+        method: "GET",
+        //headers: headerss,
+        //el cors permite hacer requests entre sitios
+        mode: 'cors'    
+    }).then(res => res.json()
+    .then(function(data) {
+    console.log(data)
+    }));
+  });
+});
+
+$(document).ready(function(){
+  $("#postbutton").click(function(){
+    console.log("haciendo post")
+    postMessage = {
+      name: "Donald Duck",
+      city: "Duckburg"
+    };
+    fetch("http://192.168.0.20:8080/test", {
+        method: "POST",
+        body: JSON.stringify(postMessage),
+        //headers: headerss,
+        //el cors permite hacer requests entre sitios
+        mode: 'cors'    
+      }).then(res => res.json()
+    .then(function(data) {
+    console.log(data)
+    }));
+  });
+});
+
+</script>
+</head>
+<body>
+
+<button id="postbutton">probar post</button>
+<button id="getbutton">probar get</button>
+</body>
+</html>

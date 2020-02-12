@@ -536,3 +536,167 @@ TypeError: The view function did not return a valid response. The function eithe
 2020-02-10 22:09:41.893 DEBUG main - <module>: Iniciando Servicio
 2020-02-10 22:10:44.081 DEBUG main - <module>: Iniciando Servicio
 2020-02-10 22:11:29.914 DEBUG main - <module>: Iniciando Servicio
+2020-02-12 02:52:31.775 DEBUG main - <module>: Iniciando Servicio
+2020-02-12 02:52:31.872 DEBUG main - main: Conectando al broker
+2020-02-12 02:52:31.949 INFO _internal - _log:  * Running on http://192.168.0.20:8080/ (Press CTRL+C to quit)
+2020-02-12 03:06:11.187 ERROR app - log_exception: Exception on /test [POST]
+Traceback (most recent call last):
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 1967, in finalize_request
+    response = self.make_response(rv)
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 2097, in make_response
+    "The view function did not return a valid response. The"
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+2020-02-12 03:06:11.209 INFO _internal - _log: 192.168.0.20 - - [12/Feb/2020 03:06:11] "[35m[1mPOST /test HTTP/1.1[0m" 500 -
+2020-02-12 03:07:00.556 ERROR app - log_exception: Exception on /test [POST]
+Traceback (most recent call last):
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 1967, in finalize_request
+    response = self.make_response(rv)
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 2097, in make_response
+    "The view function did not return a valid response. The"
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+2020-02-12 03:07:00.568 INFO _internal - _log: 192.168.0.20 - - [12/Feb/2020 03:07:00] "[35m[1mPOST /test HTTP/1.1[0m" 500 -
+2020-02-12 03:10:58.339 ERROR app - log_exception: Exception on /test [POST]
+Traceback (most recent call last):
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 1967, in finalize_request
+    response = self.make_response(rv)
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 2097, in make_response
+    "The view function did not return a valid response. The"
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+2020-02-12 03:10:58.347 INFO _internal - _log: 192.168.0.20 - - [12/Feb/2020 03:10:58] "[35m[1mPOST /test HTTP/1.1[0m" 500 -
+2020-02-12 03:14:35.113 ERROR app - log_exception: Exception on /test [POST]
+Traceback (most recent call last):
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 1967, in finalize_request
+    response = self.make_response(rv)
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 2097, in make_response
+    "The view function did not return a valid response. The"
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+2020-02-12 03:14:35.118 INFO _internal - _log: 192.168.0.20 - - [12/Feb/2020 03:14:35] "[35m[1mPOST /test HTTP/1.1[0m" 500 -
+2020-02-12 03:16:07.567 DEBUG main - <module>: Iniciando Servicio
+2020-02-12 03:16:07.607 DEBUG main - main: Conectando al broker
+2020-02-12 03:16:07.664 INFO _internal - _log:  * Running on http://192.168.0.20:8080/ (Press CTRL+C to quit)
+2020-02-12 03:16:18.055 INFO _internal - _log: 192.168.0.20 - - [12/Feb/2020 03:16:18] "[37mPOST /test HTTP/1.1[0m" 200 -
+2020-02-12 03:22:42.341 DEBUG main - <module>: Iniciando Servicio
+2020-02-12 03:22:42.384 DEBUG main - main: Conectando al broker
+2020-02-12 03:22:42.454 INFO _internal - _log:  * Running on http://192.168.0.20:8080/ (Press CTRL+C to quit)
+2020-02-12 03:24:28.978 INFO _internal - _log: 192.168.0.20 - - [12/Feb/2020 03:24:28] "[37mPOST /test HTTP/1.1[0m" 200 -
+2020-02-12 03:24:47.315 INFO _internal - _log: 192.168.0.20 - - [12/Feb/2020 03:24:47] "[37mPOST /test HTTP/1.1[0m" 200 -
+2020-02-12 03:26:43.813 DEBUG main - <module>: Iniciando Servicio
+2020-02-12 03:26:43.902 DEBUG main - main: Conectando al broker
+2020-02-12 03:26:43.970 INFO _internal - _log:  * Running on http://192.168.0.20:8080/ (Press CTRL+C to quit)
+2020-02-12 03:27:29.987 INFO _internal - _log: 192.168.0.20 - - [12/Feb/2020 03:27:29] "[37mPOST /test HTTP/1.1[0m" 200 -
+2020-02-12 03:28:12.239 DEBUG main - <module>: Iniciando Servicio
+2020-02-12 03:28:12.278 DEBUG main - main: Conectando al broker
+2020-02-12 03:28:12.378 INFO _internal - _log:  * Running on http://192.168.0.20:8080/ (Press CTRL+C to quit)
+2020-02-12 03:30:49.933 INFO _internal - _log: 192.168.0.20 - - [12/Feb/2020 03:30:49] "[37mPOST /test HTTP/1.1[0m" 200 -
+2020-02-12 03:33:52.124 DEBUG main - <module>: Iniciando Servicio
+2020-02-12 03:33:52.172 DEBUG main - main: Conectando al broker
+2020-02-12 03:33:52.229 INFO _internal - _log:  * Running on http://192.168.0.20:8080/ (Press CTRL+C to quit)
+2020-02-12 03:33:57.018 INFO _internal - _log: 192.168.0.20 - - [12/Feb/2020 03:33:57] "[37mPOST /test HTTP/1.1[0m" 200 -
+2020-02-12 03:37:33.137 DEBUG main - <module>: Iniciando Servicio
+2020-02-12 03:37:33.206 DEBUG main - main: Conectando al broker
+2020-02-12 03:37:33.447 INFO _internal - _log:  * Running on http://192.168.0.20:8080/ (Press CTRL+C to quit)
+2020-02-12 03:37:48.470 DEBUG main - <module>: Iniciando Servicio
+2020-02-12 03:37:48.489 DEBUG main - main: Conectando al broker
+2020-02-12 03:37:48.546 INFO _internal - _log:  * Running on http://192.168.0.20:8080/ (Press CTRL+C to quit)
+2020-02-12 03:37:54.077 INFO _internal - _log: 192.168.0.20 - - [12/Feb/2020 03:37:54] "[37mPOST /test HTTP/1.1[0m" 200 -
+2020-02-12 03:39:33.669 DEBUG main - <module>: Iniciando Servicio
+2020-02-12 03:39:33.710 DEBUG main - main: Conectando al broker
+2020-02-12 03:39:33.769 INFO _internal - _log:  * Running on http://192.168.0.20:8080/ (Press CTRL+C to quit)
+2020-02-12 03:39:39.360 INFO _internal - _log: 192.168.0.20 - - [12/Feb/2020 03:39:39] "[37mPOST /test HTTP/1.1[0m" 200 -
+2020-02-12 03:40:39.348 DEBUG main - <module>: Iniciando Servicio
+2020-02-12 03:40:39.381 DEBUG main - main: Conectando al broker
+2020-02-12 03:40:39.450 INFO _internal - _log:  * Running on http://192.168.0.20:8080/ (Press CTRL+C to quit)
+2020-02-12 03:40:46.037 INFO _internal - _log: 192.168.0.20 - - [12/Feb/2020 03:40:46] "[37mPOST /test HTTP/1.1[0m" 200 -
+2020-02-12 03:42:30.016 INFO _internal - _log: 192.168.0.20 - - [12/Feb/2020 03:42:30] "[37mPOST /test HTTP/1.1[0m" 200 -
+2020-02-12 03:44:56.159 DEBUG main - <module>: Iniciando Servicio
+2020-02-12 03:44:56.223 DEBUG main - main: Conectando al broker
+2020-02-12 03:44:56.277 INFO _internal - _log:  * Running on http://192.168.0.20:8080/ (Press CTRL+C to quit)
+2020-02-12 03:45:00.900 INFO _internal - _log: 192.168.0.20 - - [12/Feb/2020 03:45:00] "[37mPOST /test HTTP/1.1[0m" 200 -
+2020-02-12 04:22:03.775 DEBUG main - <module>: Iniciando Servicio
+2020-02-12 04:22:03.857 DEBUG main - main: Conectando al broker
+2020-02-12 04:33:53.980 DEBUG main - <module>: Iniciando Servicio
+2020-02-12 04:33:54.002 DEBUG main - main: Conectando al broker
+2020-02-12 04:33:54.077 INFO _internal - _log:  * Running on http://192.168.0.20:8080/ (Press CTRL+C to quit)
+2020-02-12 04:34:31.715 INFO _internal - _log: 192.168.0.20 - - [12/Feb/2020 04:34:31] "[37mGET /test HTTP/1.1[0m" 200 -
+2020-02-12 04:34:57.655 DEBUG main - <module>: Iniciando Servicio
+2020-02-12 04:34:57.696 DEBUG main - main: Conectando al broker
+2020-02-12 04:34:57.749 INFO _internal - _log:  * Running on http://192.168.0.20:8080/ (Press CTRL+C to quit)
+2020-02-12 04:35:01.893 INFO _internal - _log: 192.168.0.20 - - [12/Feb/2020 04:35:01] "[37mGET /test HTTP/1.1[0m" 200 -
+2020-02-12 04:37:36.183 DEBUG main - <module>: Iniciando Servicio
+2020-02-12 04:37:36.202 DEBUG main - main: Conectando al broker
+2020-02-12 04:37:36.265 INFO _internal - _log:  * Running on http://192.168.0.20:8080/ (Press CTRL+C to quit)
+2020-02-12 04:40:21.475 INFO _internal - _log: 192.168.0.20 - - [12/Feb/2020 04:40:21] "[37mGET /test HTTP/1.1[0m" 200 -
+2020-02-12 04:41:50.680 INFO _internal - _log: 192.168.0.20 - - [12/Feb/2020 04:41:50] "[37mGET /test HTTP/1.1[0m" 200 -
+2020-02-12 04:49:07.789 DEBUG main - <module>: Iniciando Servicio
+2020-02-12 04:49:08.003 DEBUG main - main: Conectando al broker
+2020-02-12 04:49:08.099 INFO _internal - _log:  * Running on http://192.168.0.20:8080/ (Press CTRL+C to quit)
+2020-02-12 04:50:11.356 INFO _internal - _log: 192.168.0.20 - - [12/Feb/2020 04:50:11] "[37mGET /test HTTP/1.1[0m" 200 -
+2020-02-12 04:57:56.929 DEBUG main - <module>: Iniciando Servicio
+2020-02-12 04:57:56.951 DEBUG main - main: Conectando al broker
+2020-02-12 04:57:57.012 INFO _internal - _log:  * Running on http://192.168.0.20:8080/ (Press CTRL+C to quit)
+2020-02-12 04:59:35.436 ERROR app - log_exception: Exception on /test [GET]
+Traceback (most recent call last):
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/juan/.local/lib/python3.6/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/juan/Codigos/Redes de sensores/IoTBackend/main.py", line 235, in get_test
+    return jsonify(jsonResp)
+NameError: name 'jsonify' is not defined
+2020-02-12 04:59:35.460 INFO _internal - _log: 192.168.0.20 - - [12/Feb/2020 04:59:35] "[35m[1mGET /test HTTP/1.1[0m" 500 -
+2020-02-12 05:00:18.248 ERROR app - log_exception: Exception on /test [GET]
+Traceback (most recent call last):
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/juan/.local/lib/python3.6/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/juan/Codigos/Redes de sensores/IoTBackend/main.py", line 235, in get_test
+    return jsonify(jsonResp)
+NameError: name 'jsonify' is not defined
+2020-02-12 05:00:18.258 INFO _internal - _log: 192.168.0.20 - - [12/Feb/2020 05:00:18] "[35m[1mGET /test HTTP/1.1[0m" 500 -
+2020-02-12 05:01:18.009 DEBUG main - <module>: Iniciando Servicio
+2020-02-12 05:01:18.050 DEBUG main - main: Conectando al broker
+2020-02-12 05:01:18.111 INFO _internal - _log:  * Running on http://192.168.0.20:8080/ (Press CTRL+C to quit)
+2020-02-12 05:01:27.918 INFO _internal - _log: 192.168.0.20 - - [12/Feb/2020 05:01:27] "[37mGET /test HTTP/1.1[0m" 200 -
+2020-02-12 05:08:22.029 INFO _internal - _log: 192.168.0.20 - - [12/Feb/2020 05:08:22] "[37mGET /test HTTP/1.1[0m" 200 -
+2020-02-12 06:23:37.910 DEBUG main - <module>: Iniciando Servicio
+2020-02-12 06:23:37.943 DEBUG main - main: Conectando al broker
+2020-02-12 06:23:38.004 INFO _internal - _log:  * Running on http://192.168.0.20:8080/ (Press CTRL+C to quit)
+2020-02-12 06:24:26.571 INFO _internal - _log: 192.168.0.20 - - [12/Feb/2020 06:24:26] "[37mGET /test HTTP/1.1[0m" 200 -
+2020-02-12 06:24:29.017 INFO _internal - _log: 192.168.0.20 - - [12/Feb/2020 06:24:29] "[37mPOST /test HTTP/1.1[0m" 200 -

@@ -6,10 +6,19 @@ import json
 import paho.mqtt.client as mqtt  
 import pymysql.cursors
 from flask import Flask
-from flask import request
+from flask import request, Response, jsonify
+from flask_login import UserMixin
+from flask_login import LoginManager
+from flask_cors import CORS, cross_origin
+from flask import after_this_request
+from models import users
 
 #Configuracion flask
 app = Flask(__name__)
+cors = CORS(app)
+app.config['SECRET_KEY'] = '7110c8ae51a4b5af97be6534caef90e4bb9bdcb3380af008f90b23a5d1616bf319bc298105da20fe'
+app.config['CORS_HEADERS'] = 'Content-Type'
+#login_manager = LoginManager(app)
 #cliente mqtt
 client = mqtt.Client("P1")  # create new instance
 # configuracion log
@@ -33,6 +42,17 @@ def on_message(client, userdata, msg):
     logging.debug("Incoming message!")
     # TODO: dependiendo del topico se realizan diferentes acciones
 
+#################### Implementacion login ####################
+"""
+@login_manager.user_loader
+def load_user(user_id):
+    for user in users:
+        if user.id == int(user_id):
+            return user
+    return None
+"""
+
+################### Funciones base de datos ####################
 def connect_database():
     """
     Genera un cursor para ejecutar querys en la base de datos.
@@ -178,11 +198,19 @@ def read_query(params,table,conditions=None):
 
 ########################## RUTAS API ##########################
 
+
 #TODO: Definicion rutas
 @app.route('/')
 def home():
     return 'Hola Ubunlog'
-
+"""
+@app.route('/login', methods=['POST'])
+def login():
+    content = request.get_json()
+    user = get_user(content['email'])
+    if user is not None and user.check_password(content['password']):
+        login_user(user, remember=form.remember_me.data)
+"""        
 @app.route('/api/device/switch',methods=['POST'])
 def switch():
     content = request.get_json()
@@ -193,6 +221,32 @@ def switch():
         }
         client.publish(topic,json.dumps(payload))
 
+#################### prueba para ajax con jquery ####################
+@app.route('/test', methods=['GET'])
+def get_test():
+
+    @after_this_request
+    def add_header(response):
+        response.headers.add('Access-Control-Allow-Origin', '*')
+        return response
+    # esto deberia sacarse de algun lugar dependiendo de donde se haga la peticion...
+    jsonResp = {'hola': 4098, 'asdf': 4139}
+    print(jsonResp)
+    return jsonify(jsonResp)
+
+@app.route('/test', methods=['POST'])
+def post_test():
+    print("llegó un post",request.get_data())
+    # req data puede venit de donde sea
+    req_data = { 
+        "mensaje":"jaja"
+    }
+    if(request.is_json):
+        content = request.get_json()
+        # el contenido solo se imprime para verificar que llega bien (llega como bytes)
+        print (content)
+    # se envia la respuesta
+    return Response(json.dumps(req_data, indent=4), mimetype='application/json')
 ############################################################
 
 def main():
@@ -204,7 +258,7 @@ def main():
 
     client.loop_start()
     #app.run(host='localhost',port=8080)
-    app.run(host='192.168.0.9',port=8080)
+    app.run(host='192.168.0.20',port=8080)
     while True:
         try:
             pass
@@ -238,5 +292,4 @@ update_query(data,table,conditions)
 print(read_query("*",table))
 
 """
-read_query()
 main()
