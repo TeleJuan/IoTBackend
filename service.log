@@ -700,3 +700,323 @@ NameError: name 'jsonify' is not defined
 2020-02-12 06:23:38.004 INFO _internal - _log:  * Running on http://192.168.0.20:8080/ (Press CTRL+C to quit)
 2020-02-12 06:24:26.571 INFO _internal - _log: 192.168.0.20 - - [12/Feb/2020 06:24:26] "[37mGET /test HTTP/1.1[0m" 200 -
 2020-02-12 06:24:29.017 INFO _internal - _log: 192.168.0.20 - - [12/Feb/2020 06:24:29] "[37mPOST /test HTTP/1.1[0m" 200 -
+2020-02-13 23:13:56.734 DEBUG main - <module>: Iniciando Servicio
+2020-02-13 23:16:14.946 DEBUG main - <module>: Iniciando Servicio
+2020-02-13 23:16:15.391 DEBUG main - main: Conectando al broker
+2020-02-13 23:16:15.457 INFO _internal - _log:  * Running on http://192.168.0.20:8080/ (Press CTRL+C to quit)
+2020-02-13 23:22:28.954 DEBUG main - <module>: Iniciando Servicio
+2020-02-13 23:22:29.351 DEBUG main - main: Conectando al broker
+2020-02-13 23:22:29.381 INFO _internal - _log:  * Running on http://localhost:8080/ (Press CTRL+C to quit)
+2020-02-13 23:23:18.984 INFO _internal - _log: 127.0.0.1 - - [13/Feb/2020 23:23:18] "[37mGET /test HTTP/1.1[0m" 200 -
+2020-02-14 01:10:39.325 DEBUG main - <module>: Iniciando Servicio
+2020-02-14 01:10:39.399 DEBUG main - main: Conectando al broker
+2020-02-14 01:10:39.428 INFO _internal - _log:  * Running on http://localhost:8080/ (Press CTRL+C to quit)
+2020-02-14 01:12:37.163 DEBUG main - <module>: Iniciando Servicio
+2020-02-14 01:12:37.206 DEBUG main - main: Conectando al broker
+2020-02-14 01:12:37.226 INFO _internal - _log:  * Running on http://localhost:8080/ (Press CTRL+C to quit)
+2020-02-14 23:18:42.031 DEBUG main - <module>: Iniciando Servicio
+2020-02-14 23:18:42.139 DEBUG main - main: Conectando al broker
+2020-02-14 23:18:42.152 INFO _internal - _log:  * Running on http://localhost:8080/ (Press CTRL+C to quit)
+2020-02-15 19:48:17.665 DEBUG main - <module>: Iniciando Servicio
+2020-02-15 19:48:18.838 DEBUG main - exec_query: (1146, "Table 'test.timer' doesn't exist")
+2020-02-15 19:48:18.868 DEBUG main - exec_query: (1146, "Table 'test.timer' doesn't exist")
+2020-02-15 19:48:18.872 DEBUG main - exec_query: (1146, "Table 'test.timer' doesn't exist")
+2020-02-15 19:48:18.877 DEBUG main - exec_query: (1146, "Table 'test.timer' doesn't exist")
+2020-02-15 19:48:18.937 DEBUG main - read_query: (1146, "Table 'test.timer' doesn't exist")
+2020-02-15 19:51:32.919 DEBUG main - <module>: Iniciando Servicio
+2020-02-15 19:51:32.987 DEBUG main - exec_query: (1146, "Table 'test.timer' doesn't exist")
+2020-02-15 19:51:32.994 DEBUG main - exec_query: (1146, "Table 'test.timer' doesn't exist")
+2020-02-15 19:51:33.021 DEBUG main - exec_query: (1146, "Table 'test.timer' doesn't exist")
+2020-02-15 19:51:33.038 DEBUG main - exec_query: (1146, "Table 'test.timer' doesn't exist")
+2020-02-15 19:51:33.100 DEBUG main - read_query: (1146, "Table 'test.timer' doesn't exist")
+2020-02-15 19:59:28.746 DEBUG main - <module>: Iniciando Servicio
+2020-02-15 19:59:28.853 DEBUG main - exec_query: (1146, "Table 'test.timer' doesn't exist")
+2020-02-15 19:59:28.912 DEBUG main - exec_query: (1146, "Table 'test.timer' doesn't exist")
+2020-02-15 19:59:28.945 DEBUG main - exec_query: (1146, "Table 'test.timer' doesn't exist")
+2020-02-15 19:59:28.969 DEBUG main - exec_query: (1146, "Table 'test.timer' doesn't exist")
+2020-02-15 19:59:28.978 DEBUG main - read_query: (1146, "Table 'test.timer' doesn't exist")
+2020-02-15 20:00:31.806 DEBUG main - <module>: Iniciando Servicio
+2020-03-03 12:39:27.923 DEBUG main - <module>: Iniciando Servicio
+2020-03-03 12:40:06.560 DEBUG main - <module>: Iniciando Servicio
+2020-03-03 12:40:46.041 DEBUG main - <module>: Iniciando Servicio
+2020-03-03 12:40:46.100 DEBUG main - main: Conectando al broker
+2020-03-03 12:40:46.128 INFO _internal - _log:  * Running on http://localhost:8080/ (Press CTRL+C to quit)
+2020-03-03 12:46:44.334 DEBUG main - <module>: Iniciando Servicio
+2020-03-03 12:46:44.379 DEBUG main - main: Conectando al broker
+2020-03-03 12:46:44.391 INFO _internal - _log:  * Running on http://192.168.43.49:8080/ (Press CTRL+C to quit)
+2020-03-03 12:47:25.204 INFO _internal - _log: 192.168.43.49 - - [03/Mar/2020 12:47:25] "[37mGET /test HTTP/1.1[0m" 200 -
+2020-03-03 12:55:11.307 INFO _internal - _log: 192.168.43.49 - - [03/Mar/2020 12:55:11] "[37mGET /test HTTP/1.1[0m" 200 -
+2020-03-03 12:55:36.679 ERROR app - log_exception: Exception on /api/device/switch [POST]
+Traceback (most recent call last):
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/juan/.local/lib/python3.6/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/juan/Codigos/Redes de sensores/IoTBackend/main.py", line 263, in switch
+    if("serial" in content.keys()):
+AttributeError: 'NoneType' object has no attribute 'keys'
+2020-03-03 12:55:36.694 INFO _internal - _log: 192.168.43.49 - - [03/Mar/2020 12:55:36] "[35m[1mPOST /api/device/switch HTTP/1.1[0m" 500 -
+2020-03-03 12:55:46.622 ERROR app - log_exception: Exception on /api/device/switch [POST]
+Traceback (most recent call last):
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/juan/.local/lib/python3.6/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/juan/Codigos/Redes de sensores/IoTBackend/main.py", line 263, in switch
+    if("serial" in content.keys()):
+AttributeError: 'NoneType' object has no attribute 'keys'
+2020-03-03 12:55:46.626 INFO _internal - _log: 192.168.43.49 - - [03/Mar/2020 12:55:46] "[35m[1mPOST /api/device/switch HTTP/1.1[0m" 500 -
+2020-03-03 12:56:06.007 ERROR app - log_exception: Exception on /api/device/switch [POST]
+Traceback (most recent call last):
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/juan/.local/lib/python3.6/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/juan/Codigos/Redes de sensores/IoTBackend/main.py", line 263, in switch
+    if("serial" in content.keys()):
+AttributeError: 'NoneType' object has no attribute 'keys'
+2020-03-03 12:56:06.010 INFO _internal - _log: 192.168.43.49 - - [03/Mar/2020 12:56:06] "[35m[1mPOST /api/device/switch HTTP/1.1[0m" 500 -
+2020-03-03 12:57:31.767 ERROR app - log_exception: Exception on /api/device/switch [POST]
+Traceback (most recent call last):
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/juan/.local/lib/python3.6/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/juan/Codigos/Redes de sensores/IoTBackend/main.py", line 263, in switch
+    if("serial" in content.keys()):
+AttributeError: 'NoneType' object has no attribute 'keys'
+2020-03-03 12:57:31.771 INFO _internal - _log: 192.168.43.49 - - [03/Mar/2020 12:57:31] "[35m[1mPOST /api/device/switch HTTP/1.1[0m" 500 -
+2020-03-03 12:58:40.559 ERROR app - log_exception: Exception on /api/device/switch [POST]
+Traceback (most recent call last):
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/juan/.local/lib/python3.6/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/juan/Codigos/Redes de sensores/IoTBackend/main.py", line 263, in switch
+    if("serial" in content.keys()):
+AttributeError: 'NoneType' object has no attribute 'keys'
+2020-03-03 12:58:40.564 INFO _internal - _log: 192.168.43.49 - - [03/Mar/2020 12:58:40] "[35m[1mPOST /api/device/switch HTTP/1.1[0m" 500 -
+2020-03-03 12:59:09.758 DEBUG main - <module>: Iniciando Servicio
+2020-03-03 12:59:09.850 DEBUG main - main: Conectando al broker
+2020-03-03 12:59:09.864 INFO _internal - _log:  * Running on http://192.168.43.49:8080/ (Press CTRL+C to quit)
+2020-03-03 12:59:19.455 ERROR app - log_exception: Exception on /api/device/switch [POST]
+Traceback (most recent call last):
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/juan/.local/lib/python3.6/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/juan/Codigos/Redes de sensores/IoTBackend/main.py", line 264, in switch
+    if("serial" in content.keys()):
+AttributeError: 'NoneType' object has no attribute 'keys'
+2020-03-03 12:59:19.466 INFO _internal - _log: 192.168.43.49 - - [03/Mar/2020 12:59:19] "[35m[1mPOST /api/device/switch HTTP/1.1[0m" 500 -
+2020-03-03 12:59:51.117 DEBUG main - <module>: Iniciando Servicio
+2020-03-03 12:59:51.190 DEBUG main - main: Conectando al broker
+2020-03-03 12:59:51.401 INFO _internal - _log:  * Running on http://192.168.43.49:8080/ (Press CTRL+C to quit)
+2020-03-03 12:59:58.118 ERROR app - log_exception: Exception on /api/device/switch [POST]
+Traceback (most recent call last):
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/juan/.local/lib/python3.6/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/juan/Codigos/Redes de sensores/IoTBackend/main.py", line 264, in switch
+    if("serial" in content.keys()):
+AttributeError: 'NoneType' object has no attribute 'keys'
+2020-03-03 12:59:58.136 INFO _internal - _log: 192.168.43.49 - - [03/Mar/2020 12:59:58] "[35m[1mPOST /api/device/switch HTTP/1.1[0m" 500 -
+2020-03-03 13:05:13.779 DEBUG main - <module>: Iniciando Servicio
+2020-03-03 13:05:13.862 DEBUG main - main: Conectando al broker
+2020-03-03 13:05:13.880 INFO _internal - _log:  * Running on http://192.168.43.49:8080/ (Press CTRL+C to quit)
+2020-03-03 13:06:27.398 ERROR app - log_exception: Exception on /api/device/switch [POST]
+Traceback (most recent call last):
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/juan/.local/lib/python3.6/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/juan/Codigos/Redes de sensores/IoTBackend/main.py", line 264, in switch
+    if("serial" in content.keys()):
+AttributeError: 'NoneType' object has no attribute 'keys'
+2020-03-03 13:06:27.407 INFO _internal - _log: 192.168.43.49 - - [03/Mar/2020 13:06:27] "[35m[1mPOST /api/device/switch HTTP/1.1[0m" 500 -
+2020-03-03 13:07:11.483 DEBUG main - <module>: Iniciando Servicio
+2020-03-03 13:07:11.526 DEBUG main - main: Conectando al broker
+2020-03-03 13:07:11.554 INFO _internal - _log:  * Running on http://192.168.43.49:8080/ (Press CTRL+C to quit)
+2020-03-03 13:08:19.691 DEBUG main - <module>: Iniciando Servicio
+2020-03-03 13:08:19.778 DEBUG main - main: Conectando al broker
+2020-03-03 13:08:20.023 INFO _internal - _log:  * Running on http://192.168.43.49:8080/ (Press CTRL+C to quit)
+2020-03-03 13:09:10.468 ERROR app - log_exception: Exception on /api/device/switch [POST]
+Traceback (most recent call last):
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/juan/.local/lib/python3.6/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/juan/Codigos/Redes de sensores/IoTBackend/main.py", line 264, in switch
+    if("serial" in content.keys()):
+AttributeError: 'NoneType' object has no attribute 'keys'
+2020-03-03 13:09:10.479 INFO _internal - _log: 192.168.43.49 - - [03/Mar/2020 13:09:10] "[35m[1mPOST /api/device/switch HTTP/1.1[0m" 500 -
+2020-03-03 13:10:03.982 ERROR app - log_exception: Exception on /api/device/switch [POST]
+Traceback (most recent call last):
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/juan/.local/lib/python3.6/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/juan/Codigos/Redes de sensores/IoTBackend/main.py", line 264, in switch
+    if("serial" in content.keys()):
+AttributeError: 'str' object has no attribute 'keys'
+2020-03-03 13:10:03.986 INFO _internal - _log: 192.168.43.49 - - [03/Mar/2020 13:10:03] "[35m[1mPOST /api/device/switch HTTP/1.1[0m" 500 -
+2020-03-03 13:10:26.504 ERROR app - log_exception: Exception on /api/device/switch [POST]
+Traceback (most recent call last):
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 1967, in finalize_request
+    response = self.make_response(rv)
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 2097, in make_response
+    "The view function did not return a valid response. The"
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+2020-03-03 13:10:26.506 INFO _internal - _log: 192.168.43.49 - - [03/Mar/2020 13:10:26] "[35m[1mPOST /api/device/switch HTTP/1.1[0m" 500 -
+2020-03-03 13:21:14.318 INFO _internal - _log: 192.168.43.49 - - [03/Mar/2020 13:21:14] "[37mGET /test HTTP/1.1[0m" 200 -
+2020-03-03 13:22:45.683 ERROR app - log_exception: Exception on /api/device/switch [POST]
+Traceback (most recent call last):
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 1967, in finalize_request
+    response = self.make_response(rv)
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 2097, in make_response
+    "The view function did not return a valid response. The"
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+2020-03-03 13:22:45.687 INFO _internal - _log: 192.168.43.49 - - [03/Mar/2020 13:22:45] "[35m[1mPOST /api/device/switch HTTP/1.1[0m" 500 -
+2020-03-03 13:26:22.896 ERROR app - log_exception: Exception on /api/device/switch [POST]
+Traceback (most recent call last):
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 1967, in finalize_request
+    response = self.make_response(rv)
+  File "/home/juan/.local/lib/python3.6/site-packages/flask/app.py", line 2097, in make_response
+    "The view function did not return a valid response. The"
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+2020-03-03 13:26:22.898 INFO _internal - _log: 192.168.43.49 - - [03/Mar/2020 13:26:22] "[35m[1mPOST /api/device/switch HTTP/1.1[0m" 500 -
+2020-03-03 13:27:39.385 DEBUG main - <module>: Iniciando Servicio
+2020-03-03 13:27:39.490 DEBUG main - main: Conectando al broker
+2020-03-03 13:27:49.518 INFO _internal - _log:  * Running on http://192.168.43.49:8080/ (Press CTRL+C to quit)
+2020-03-03 13:28:44.842 INFO _internal - _log: 192.168.43.49 - - [03/Mar/2020 13:28:44] "[37mPOST /api/device/switch HTTP/1.1[0m" 200 -
+2020-03-03 13:35:00.929 INFO _internal - _log: 192.168.43.49 - - [03/Mar/2020 13:35:00] "[37mPOST /api/device/switch HTTP/1.1[0m" 200 -
+2020-03-03 13:39:06.794 INFO _internal - _log: 192.168.43.49 - - [03/Mar/2020 13:39:06] "[37mPOST /api/device/switch HTTP/1.1[0m" 200 -
+2020-03-03 13:39:32.863 INFO _internal - _log: 192.168.43.49 - - [03/Mar/2020 13:39:32] "[37mPOST /api/device/switch HTTP/1.1[0m" 200 -
+2020-03-03 13:40:42.139 INFO _internal - _log: 192.168.43.49 - - [03/Mar/2020 13:40:42] "[37mPOST /api/device/switch HTTP/1.1[0m" 200 -
+2020-03-03 13:40:50.951 INFO _internal - _log: 192.168.43.49 - - [03/Mar/2020 13:40:50] "[37mPOST /api/device/switch HTTP/1.1[0m" 200 -
+2020-03-03 13:42:25.488 INFO _internal - _log: 192.168.43.49 - - [03/Mar/2020 13:42:25] "[37mPOST /api/device/switch HTTP/1.1[0m" 200 -
+2020-03-03 13:43:47.439 INFO _internal - _log: 192.168.43.49 - - [03/Mar/2020 13:43:47] "[37mPOST /api/device/switch HTTP/1.1[0m" 200 -
+2020-03-03 13:44:00.136 INFO _internal - _log: 192.168.43.49 - - [03/Mar/2020 13:44:00] "[37mPOST /api/device/switch HTTP/1.1[0m" 200 -
+2020-03-04 22:51:23.482 DEBUG main - <module>: Iniciando Servicio
+2020-03-04 22:51:23.875 DEBUG main - main: Conectando al broker
+2020-03-04 22:51:56.552 DEBUG main - <module>: Iniciando Servicio
+2020-03-04 22:51:56.677 DEBUG main - main: Conectando al broker
+2020-03-04 22:51:56.781 INFO _internal - _log:  * Running on http://192.168.0.10:8080/ (Press CTRL+C to quit)
+2020-03-04 22:53:25.018 INFO _internal - _log: 192.168.0.8 - - [04/Mar/2020 22:53:25] "[37mGET /test HTTP/1.1[0m" 200 -
+2020-03-04 22:54:25.064 INFO _internal - _log: 192.168.0.8 - - [04/Mar/2020 22:54:25] "[37mGET /test HTTP/1.1[0m" 200 -
+2020-03-04 22:58:16.094 DEBUG main - <module>: Iniciando Servicio
+2020-03-04 22:58:16.221 DEBUG main - main: Conectando al broker
+2020-03-04 22:58:16.282 INFO _internal - _log:  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)

@@ -3,8 +3,11 @@
 
 import logging
 import json
-import paho.mqtt.client as mqtt  
+import threading
+import time
+import queue
 import pymysql.cursors
+import paho.mqtt.client as mqtt  
 from flask import Flask
 from flask import request, Response, jsonify
 from flask_login import UserMixin
@@ -32,25 +35,49 @@ logging.basicConfig(
 # log inicial
 logging.debug('Iniciando Servicio')
 
-
 # variables importantes
 broker_address = "localhost"
 port = 1883
+api_host = '0.0.0.0'
+#api_host = 'localhost'
+# TODO: aqui deberia ir el queue(? == Fel
+events_queue = queue.PriorityQueue()
 
 def on_message(client, userdata, msg):
     topic = msg.topic.split("/")
     logging.debug("Incoming message!")
     # TODO: dependiendo del topico se realizan diferentes acciones
+    
+#################### Funciones FEL(queue) ####################
 
-#################### Implementacion login ####################
-"""
-@login_manager.user_loader
-def load_user(user_id):
-    for user in users:
-        if user.id == int(user_id):
-            return user
-    return None
-"""
+def calcularPrioridad(tiempo):
+    pass
+
+def cargar_fel():
+
+    timer_dict = read_query('*','timer')
+    horario_dict = read_query('*','horario')
+
+    for k in timer_dict.values():
+        # tipo evento 0 => evento on/off
+        # TODO: falta especificar el tiempo
+        events_queue.put((("PRIORIDAD","TIEMPO",0,k),1))
+
+    for k in horario_dict.values():
+        # tipo evento 1 => evento de limitar
+        events_queue.put((("PRIORIDAD","TIEMPO",1,k),1))
+
+    print(timer_dict)
+
+def vaciar_fel(fel):
+    for i in range(fel.qsize()):
+        fel.get()
+
+def time_threat():
+    while True:
+        pass
+
+######################################################
 
 ################### Funciones base de datos ####################
 def connect_database():
@@ -60,7 +87,7 @@ def connect_database():
     connection = pymysql.connect(host='localhost',
         user='juan',
         password='manzana',
-        db='test',
+        db='iotbackend',
         charset='utf8mb4',
         cursorclass=pymysql.cursors.DictCursor
     )
@@ -97,18 +124,18 @@ def get_info(data):
     """
     recibe un diccionario atributos y su correspondiente valor, los transforma en dos strings.
     """
-    params = ""
+    atributes = ""
     values = ""
     for j,k in data.items():
-        params+= j + ","
+        atributes+= j + ","
 
         if(str(type(k)) == "<class 'int'>"): values+= str(k) +","
         else: values+= "'" + k + "'" + ","
 
-    params = params[:-1]
+    atributes = atributes[:-1]
     values = values[:-1]        
 
-    return (params,values)
+    return (atributes,values)
 
 def insert_query(data,table):
     """
@@ -145,10 +172,10 @@ def delete_query(table,conditions=None):
     else:query = "delete from %s"%(table)
     exec_query(query)
 
-def read_query(params,table,conditions=None):
+def read_query(atributes,table,conditions=None):
     """
-        Lee los parametros indicados en params de la tabla especificada, siguiendo las restricciones entregadas en forma de diccionario
-        params puede ser una lista con varios parametros, o un string con un asterisco para leer todos.
+        Lee los parametros indicados en atributes de la tabla especificada, siguiendo las restricciones entregadas en forma de diccionario
+        atributes puede ser una lista con varios parametros, o un string con un asterisco para leer todos.
         ejemplo formato de salida: ( diccionario de diccionarios )
 
         {
@@ -169,8 +196,8 @@ def read_query(params,table,conditions=None):
     result = dict()
     if(conditions!= None):conditions = get_conditions(conditions)
     select = ""
-    if params[0] != "*":
-        for j in params:
+    if atributes[0] != "*":
+        for j in atributes:
             select+= j + ","
         select = select[:-1]
     else: select = "*"
@@ -213,6 +240,7 @@ def login():
 """        
 @app.route('/api/device/switch',methods=['POST'])
 def switch():
+    print("switch")
     content = request.get_json()
     if("serial" in content.keys()):
         topic= "down/%s/switch"%(content["serial"])
@@ -220,6 +248,7 @@ def switch():
             "state":content["state"] 
         }
         client.publish(topic,json.dumps(payload))
+    return "ok"
 
 #################### prueba para ajax con jquery ####################
 @app.route('/test', methods=['GET'])
@@ -229,6 +258,7 @@ def get_test():
     def add_header(response):
         response.headers.add('Access-Control-Allow-Origin', '*')
         return response
+
     # esto deberia sacarse de algun lugar dependiendo de donde se haga la peticion...
     jsonResp = {'hola': 4098, 'asdf': 4139}
     print(jsonResp)
@@ -247,6 +277,16 @@ def post_test():
         print (content)
     # se envia la respuesta
     return Response(json.dumps(req_data, indent=4), mimetype='application/json')
+
+@app.route('/test', methods=['PUT'])
+def put_test():
+    print("llegó un post",request.get_data())
+    pass
+
+@app.route('/test', methods=['DELETE'])
+def delete_test():
+    print("llegó un post",request.get_data())
+    pass
 ############################################################
 
 def main():
@@ -255,10 +295,11 @@ def main():
     logging.debug("Conectando al broker")
 
     client.subscribe(topic="up/#",qos=2)
+    client.publish(topic="test/topic",qos=2,payload="Servidor listo")
 
     client.loop_start()
     #app.run(host='localhost',port=8080)
-    app.run(host='192.168.0.20',port=8080)
+    app.run(host=api_host,port=8080)
     while True:
         try:
             pass
@@ -290,6 +331,20 @@ insert_query(data,table)
 print(read_query("*",table))
 update_query(data,table,conditions)
 print(read_query("*",table))
+main()
 
 """
-main()
+
+hilo_1 = threading.Thread(target=main)
+hilo_2 = threading.Thread(target=time_threat)
+
+hilo_1.start()
+hilo_2.start()
+
+"""
+insert_query({"id":"11700","serie":"PLUG000","duracion":"5","repeticion":"-1"},"timer")
+insert_query({"id":"20300","serie":"PLUG000","duracion":"5","repeticion":"-1"},"timer")
+insert_query({"id":"61800","serie":"PLUG000","duracion":"5","repeticion":"-1"},"timer")
+insert_query({"id":"71200","serie":"PLUG000","duracion":"5","repeticion":"-1"},"timer")
+"""
+#cargar_fel()
